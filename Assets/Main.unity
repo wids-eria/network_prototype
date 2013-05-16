@@ -491,6 +491,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1670180678}
   - 114: {fileID: 1670180679}
+  - 114: {fileID: 1670180680}
   m_Layer: 0
   m_Name: GameManagerSoul
   m_TagString: Untagged
@@ -521,6 +522,16 @@ MonoBehaviour:
   m_Name: 
   prefabulous: {fileID: 100000, guid: 5229e60bcc62e43e993f7d22e922ca5e, type: 2}
   spawn_point: {fileID: 434347933}
+--- !u!114 &1670180680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1670180677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83d383f5b9af747e2af9d10eab6b46a7, type: 1}
+  m_Name: 
 --- !u!1 &1854557404
 GameObject:
   m_ObjectHideFlags: 0
