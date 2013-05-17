@@ -415,6 +415,9 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b7b7d3471207744fcba707b62b27935f, type: 1}
   m_Name: 
+  number_of_players: 32
+  port_number: 25000
+  password: a password
 --- !u!1 &1137846550
 GameObject:
   m_ObjectHideFlags: 0
