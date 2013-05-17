@@ -27,7 +27,7 @@ public class NetworkManager : MonoBehaviour {
     // CLIENT
 
     public void connect_to(string server_host) {
-        Network.Connect(server_host, port_number);
+        Network.Connect(server_host, port_number, password);
     }
 
     void OnConnectedToServer()      { Debug.Log ("Connected to server");      }

@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 
 public class NetworkGUI : MonoBehaviour {
-  public string connect_host = PlayerPrefs.GetString("connect_host", "127.0.0.1");
+  public string connect_host = "127.0.0.1";
 
   public GUIStyle guiPixelBoxStyle;
   public GUIStyle guiDropShadowStyle;
@@ -10,6 +10,9 @@ public class NetworkGUI : MonoBehaviour {
 
   public NetworkManager network_manager;
 
+  void OnEnable () {
+    connect_host = PlayerPrefs.GetString("connect_host", "127.0.0.1");
+  }
 
   void OnGUI () {
     GUILayout.BeginArea (new Rect (10, 10, 200, 150), guiPixelBoxStyle);
