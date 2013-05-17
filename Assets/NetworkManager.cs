@@ -16,16 +16,21 @@ public class NetworkManager : MonoBehaviour {
     }
 
 
-    void OnServerInitialized()
-    {
-        Debug.Log("The server is successfully initialized.");
-    }
+    void OnServerInitialized()  { Debug.Log ("Server Initialized."); }
+
+    void OnPlayerDisconnected() { Debug.Log ("Player Disconnected"); }
+
+    void OnPlayerConnected()    { Debug.Log ("Player Connected");    }
 
 
 
     // CLIENT
 
     public void connect_to(string server_host) {
-
+        Network.Connect(server_host, port_number);
     }
+
+    void OnConnectedToServer()      { Debug.Log ("Connected to server");      }
+
+    void OnDisconnectedFromServer() { Debug.Log ("Disconnected from server"); }
 }
