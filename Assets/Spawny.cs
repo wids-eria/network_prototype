@@ -8,17 +8,27 @@ public class Spawny : MonoBehaviour {
 
   // Update is called once per frame
   void Update () {
-    if(Input.GetButtonDown("Fire1")) {
-      GameObject new_thing = (GameObject)Instantiate (prefabulous, spawn_point.transform.position, Quaternion.identity);
+    if(Input.GetButtonDown("Fire3")) {
 
-      if (Random.value > 0.5) {
-        new_thing.renderer.material.SetColor("_Color", new Color(Random.value, Random.value, Random.value));
-      }
-      else if (Random.value > 0.5F) {
-        Material thing2 = (Material)Instantiate(Resources.Load("Thing2"));
-        new_thing.renderer.material = thing2;
-        new_thing.transform.localScale += new Vector3(0.5F,0.5F,0.5F);
+      Ray ray = Camera.main.ScreenPointToRay( Input.mousePosition );
+      RaycastHit hit;
 
+      if( Physics.Raycast( ray, out hit, 100 ) ) {
+
+        // GameObject new_thing = (GameObject)Instantiate (prefabulous, spawn_point.transform.position, Quaternion.identity);
+        GameObject new_thing = (GameObject)Instantiate (prefabulous, hit.point + (Vector3.up * 0.5F), Quaternion.LookRotation(hit.normal));
+
+        if (Random.value > 0.5) {
+          new_thing.renderer.material.SetColor("_Color", new Color(Random.value, Random.value, Random.value));
+        }
+        else if (Random.value > 0.5F) {
+          Material thing2 = (Material)Instantiate(Resources.Load("Thing2"));
+          new_thing.renderer.material = thing2;
+          new_thing.transform.localScale += new Vector3(0.5F,0.5F,0.5F);
+
+        }
+
+        // TODO network request to build object
       }
     }
   }
