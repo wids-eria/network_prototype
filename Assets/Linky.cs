@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Linky : MonoBehaviour {
   GameObject first_pick;
+  public Spawny spawner; // FIXME remove coupling, dynamic find from parent game manager soul (or global?)
 
   // Update is called once per frame
   void Update () {
@@ -22,6 +23,8 @@ public class Linky : MonoBehaviour {
           GameObject second_pick = selected_object;
 
           second_pick.renderer.material = first_pick.renderer.material;
+
+          spawner.request_color_change(second_pick, first_pick.renderer.material.GetColor("_Color"));
 
           first_pick = null;
         }

@@ -6,6 +6,9 @@ public class NetworkManager : MonoBehaviour {
     public int port_number = 25000;
     public string password = "a password";
 
+    public Spawny spawner; // TODO use dynamics or link to parent instead for less coupling
+
+
     // SERVER
 
     public void launch_server()
@@ -30,7 +33,7 @@ public class NetworkManager : MonoBehaviour {
         Network.Connect(server_host, port_number, password);
     }
 
-    void OnConnectedToServer()      { Debug.Log ("Connected to server");      }
+    void OnConnectedToServer()      { Debug.Log ("Connected to server"); spawner.request_all_objects(); }
 
     void OnDisconnectedFromServer() { Debug.Log ("Disconnected from server"); }
 }

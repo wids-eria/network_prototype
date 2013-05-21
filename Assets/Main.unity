@@ -387,6 +387,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 485741302}
   - 114: {fileID: 485741303}
+  - 148: {fileID: 485741304}
   m_Layer: 0
   m_Name: NetworkManagerSoul
   m_TagString: Untagged
@@ -418,6 +419,19 @@ MonoBehaviour:
   number_of_players: 32
   port_number: 25000
   password: a password
+  spawner: {fileID: 1670180679}
+--- !u!148 &485741304
+NetworkView:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 485741301}
+  m_Enabled: 1
+  m_StateSynchronization: 0
+  m_Observed: {fileID: 0}
+  m_ViewID:
+    m_ID: 2
+    m_Type: 1
 --- !u!1 &1137846550
 GameObject:
   m_ObjectHideFlags: 0
@@ -507,6 +521,7 @@ GameObject:
   - 4: {fileID: 1670180678}
   - 114: {fileID: 1670180679}
   - 114: {fileID: 1670180680}
+  - 148: {fileID: 1670180681}
   m_Layer: 0
   m_Name: GameManagerSoul
   m_TagString: Untagged
@@ -537,6 +552,7 @@ MonoBehaviour:
   m_Name: 
   prefabulous: {fileID: 100000, guid: 5229e60bcc62e43e993f7d22e922ca5e, type: 2}
   spawn_point: {fileID: 434347933}
+  game_objects: []
 --- !u!114 &1670180680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -547,6 +563,19 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 83d383f5b9af747e2af9d10eab6b46a7, type: 1}
   m_Name: 
+  spawner: {fileID: 1670180679}
+--- !u!148 &1670180681
+NetworkView:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1670180677}
+  m_Enabled: 1
+  m_StateSynchronization: 0
+  m_Observed: {fileID: 0}
+  m_ViewID:
+    m_ID: 1
+    m_Type: 1
 --- !u!1 &1854557404
 GameObject:
   m_ObjectHideFlags: 0
