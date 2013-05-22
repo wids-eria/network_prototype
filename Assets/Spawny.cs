@@ -11,6 +11,13 @@ public class Spawny : MonoBehaviour {
 
   void Start () {
     game_objects = new List<GameObject>();
+    Messenger<float>.AddListener ("spawn all the things", OnSpawnThings);
+    Messenger<float>.Broadcast   ("spawn all the things", 14.5F);
+  }
+
+  void OnSpawnThings(float spawny)
+  {
+    Debug.Log("spawny: "+spawny);
   }
 
   // Update is called once per frame
